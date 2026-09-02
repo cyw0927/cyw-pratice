@@ -11,6 +11,5 @@ class Base(DeclarativeBase):
     id: Mapped[int] = mapped_column(Identity(always=True), primary_key=True)
 
     public_id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True), unique=True, nullable=False, default=uuid.uuid4,
-        server_default=text("gen_random_uuid()")
+        UUID(as_uuid=True), unique=True, nullable=False, server_default=text("gen_random_uuid()")
     )

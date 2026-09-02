@@ -361,7 +361,6 @@ def upgrade() -> None:
         sa.Column("status", sa.String(), nullable=False),
         sa.Column("is_correct", sa.Boolean(), nullable=True),
         sa.Column("used_hint", sa.Boolean(), nullable=False),
-        sa.Column("result_detail", sa.Text(), nullable=True),
         sa.Column(
             "attempted_at",
             sa.DateTime(timezone=True),
