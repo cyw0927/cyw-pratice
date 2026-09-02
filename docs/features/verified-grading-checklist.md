@@ -1,7 +1,10 @@
 # 검증된 채점 체크리스트 (5-1~5-16)
 
-검증일: 2026-09-02  
-기준 원본: `cat-game-backend-main.zip` (SHA-256 `EF85716C50F8F3E6BB06745EF2FDBC4458BCA908F7868DB614FE9B4695DDFFE4`)  
+검증일: 2026-09-02
+
+최초 기준 원본: `cat-game-backend-main.zip` (SHA-256 `EF85716C50F8F3E6BB06745EF2FDBC4458BCA908F7868DB614FE9B4695DDFFE4`)
+
+최신 DB 통합 원본: `cat-game-backend-main (1).zip` (SHA-256 `FB5E0F4D9538DDD4996BB00BA9479AA80DF37AE6A91D81F054DF074077BFD248`)
 판정 원칙: 코드 존재만으로 완료 처리하지 않고 관련 테스트 또는 실제 실행 근거가 있어야 `[x]`로 판정한다.
 
 환경 메모: 이 Codex 실행 환경에서는 `docker.exe`를 PATH와 일반 설치 경로에서 찾지 못했다. 따라서 Docker 전용 항목은 구현되어 있어도 실제 build/run 근거가 없으면 `[ ]`이다.
@@ -57,7 +60,7 @@
   - 정책: 탐지된 학생 timeout/output-limit은 현재 COMPLETED+false. 팀 최종 정책 TBD.
 
 - [ ] **5-11 결과 DB 저장**
-  - 근거: PENDING→RUNNING→COMPLETED/FAILED, `result_detail`, 별도 DB 세션 구현.
+  - 근거: PENDING→RUNNING→COMPLETED/FAILED, `result_detail`, 별도 DB 세션 구현. 최신 DB에는 `d2a4c1b9e730` 후속 마이그레이션으로 추가.
   - 미완료: 실제 DB 상태 전이 통합 테스트 미작성.
 
 - [ ] **5-12 DAILY 완료 연동**
